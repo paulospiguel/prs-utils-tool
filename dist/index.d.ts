@@ -1,7 +1,4 @@
-declare enum Language {
-    EN = "en",
-    PT = "pt"
-}
+type Language = "en" | "pt";
 interface Color {
     label: {
         en: string;
@@ -16,12 +13,11 @@ interface Size {
     };
     value: string;
 }
+export interface Option extends Omit<Color, "label">, Omit<Size, "label"> {
+    label: string;
+}
 export declare function getColorsAndSizesByLanguage(language?: Language): {
-    colors: (Omit<Color, "label"> & {
-        label: string;
-    })[];
-    sizes: (Omit<Size, "label"> & {
-        label: string;
-    })[];
+    colors: Option[];
+    sizes: Option[];
 };
 export {};

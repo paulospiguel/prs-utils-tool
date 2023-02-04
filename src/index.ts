@@ -1,7 +1,4 @@
-enum Language {
-  EN = "en",
-  PT = "pt",
-}
+type Language = "en" | "pt";
 
 interface Color {
   label: {
@@ -17,6 +14,10 @@ interface Size {
     pt: string;
   };
   value: string;
+}
+
+export interface Option extends Omit<Color, "label">, Omit<Size, "label"> {
+  label: string;
 }
 
 const colors: Color[] = [
@@ -46,10 +47,10 @@ const sizes: Size[] = [
 ];
 
 export function getColorsAndSizesByLanguage(language?: Language): {
-  colors: (Omit<Color, "label"> & { label: string })[];
-  sizes: (Omit<Size, "label"> & { label: string })[];
+  colors: Option[];
+  sizes: Option[];
 } {
-  const lang = language || Language.EN;
+  const lang = language || "en";
 
   return {
     colors: colors.map((color) => ({

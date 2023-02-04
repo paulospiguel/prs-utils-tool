@@ -2,6 +2,14 @@
 ## Utils Tool
 ##### Exported functions
 ---------------------------
-> GetColorsAndSizesByLanguage
->
-> ##### Usings the colors and sizes
+
+ ##### Usings the colors and sizes
+
+```javascript
+import { getColorsAndSizesByLanguage } from "prs-utils-tool"
+
+const { colors, sizes } = getColorsAndSizesByLanguage("pt")
+
+```
+
+

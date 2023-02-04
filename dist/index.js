@@ -1,10 +1,5 @@
 'use strict';
 
-var Language;
-(function (Language) {
-    Language["EN"] = "en";
-    Language["PT"] = "pt";
-})(Language || (Language = {}));
 var colors = [
     { label: { en: "Red", pt: "Vermelho" }, value: "red" },
     { label: { en: "Green", pt: "Verde" }, value: "green" },
@@ -30,7 +25,7 @@ var sizes = [
     { label: { en: "Double Extra Large", pt: "2XL" }, value: "2xlarge" },
 ];
 function getColorsAndSizesByLanguage(language) {
-    var lang = language || Language.EN;
+    var lang = language || "en";
     return {
         colors: colors.map(function (color) { return ({
             label: color.label[lang],
