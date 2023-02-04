@@ -1,0 +1,27 @@
+{
+  "name": "prs-utils-tool",
+  "version": "0.1.1",
+  "description": "",
+  "main": "index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "publish": "npm run build && npm version patch && npm publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "rollup": "^3.13.0",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
+  }
+}
