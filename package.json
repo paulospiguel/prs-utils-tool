@@ -1,6 +1,6 @@
 {
   "name": "prs-utils-tool",
-  "version": "0.1.8",
+  "version": "0.1.11",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,7 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c",
     "watch": "rollup -c -w",
-    "publish": "npm run build && npm version patch && npm publish"
+    "publishVersion": "npm run build && npm version patch && npm publish"
   },
   "keywords": [],
   "author": "",
